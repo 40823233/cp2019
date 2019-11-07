@@ -149,13 +149,33 @@ init_mathjax();
           </div>
           
         </header>
-    <div id="tipue_search_content">作業 << <a href='作業.html'>Previous</a> <a href='Dart2.html'>Next</a> >> Dart2<br /><h1>dart</h1>
-<p></p>
-<p>我的程式代碼hello:<a href="https://github.com/40823233/cp2019/blob/master/dart_ex/hello.dart">https://github.com/40823233/cp2019/blob/master/dart_ex/hello.dart</a><a href="https://40823233.github.io/cp2019/content/index.html"> </a></p>
-<p>for loop:<a href="https://github.com/40823233/cp2019/blob/master/dart_ex/for%20loop.dart">https://github.com/40823233/cp2019/blob/master/dart_ex/for%20loop.dart</a></p>
-<p><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=59b00649ae252520323cfaed2947d53d&amp;theme=dark" width="800"></iframe></p>
-<p><a href="https://40823233.github.io/cp2019/content/index.html"><iframe height="600" src="https://dartpad.dev/embed-inline.html?id=c0c4236f2ad9062ed3791dd5541e22c0&amp;theme=dark" width="800"></iframe></a></p>
-<br />作業 << <a href='作業.html'>Previous</a> <a href='Dart2.html'>Next</a> >> Dart2</div>
+    <div id="tipue_search_content">dart << <a href='dart.html'>Previous</a> <a href='倉庫.html'>Next</a> >> 倉庫<br /><h1>Dart2</h1>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823233&gh_repo=cp2019&gh_path=dart_ex/" + dirname + "&theme=dark"
+;    document.getElementById("iframe").src = source ;
+}
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823233&gh_repo=cp2019&gh_path=dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=mdecourse&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script>
+<!-- 取 Dart 程式的按鈕 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button> <button onclick="getDart('hello')">hello</button> <button onclick="getDart('for')">for loop</button> <button onclick="getDart('sum')">Sum</button><button onclick="getDart('runge_kutta')">Runge-Kutta</button></p>
+<p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></p>
+<p><img alt="" height="347" src="/get_page/images/A2017-04-21-1.png" width="500"/></p><br />dart << <a href='dart.html'>Previous</a> <a href='倉庫.html'>Next</a> >> 倉庫</div>
         
     <!-- footer -->
       <div class="container">
