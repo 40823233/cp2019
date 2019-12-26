@@ -3,8 +3,103 @@
 <p>這是我的倉儲：<a href="https://github.com/40823233/cp2019">https://github.com/40823233/cp2019</a></p>
 <p><span>小組倉儲:</span><a href="https://github.com/40823245/cp2019bg4">https://github.com/40823245/cp2019bg4</a></p>
 <p><img alt="x" height="500" src="/images/20170128_155549.jpg" width="800"/></p>
+<p></p>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script src="/get_page/cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+<script src="/get_page/cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+<script src="/get_page/%E4%BD%9C/tipuesearch_content.js"></script>
+<script src="/get_page/cmsimde/static/tipuesearch/tipuesearch.js"></script>
+<script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        
+</script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shCore.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushJScript.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushJava.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPython.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushSql.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushHaxe.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushXml.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushPhp.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushLua.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCpp.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCss.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushCSharp.js" type="text/javascript"></script>
+<script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushDart.js" type="text/javascript"></script>
+<script type="text/javascript">
+SyntaxHighlighter.all();
+</script>
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
 <h1>作業</h1>
-<h3>dart</h3>
+<h2>JavaScript</h2>
+<p>國旗</p>
+<p><canvas height="200" id="canvas" width="300"></canvas></p>
+<p></p>
+<script src="/get_page/downloads/dart_ex/roc_flag/roc_flag.js"></script>
+<p>亂數分組</p>
+<p>學員名單 URL: <input id="studListUrl" size="50" type="text" value="https://mde.tw/cp2019/downloads/2019fall_cp_1b_list.txt"/> 每組人數: <input id="grpNum" size="3" type="text" value="10"/> <input id="submit" type="submit" value="開始分組"/></p>
+<!-- for site wrap -->
+<p></p>
+<!-- <script src="cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+<script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/popper.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/bootstrap.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+<script src="/get_page/cmsimde/static/chimper/js/aos.js"></script>
+<!--
+            <script src="cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+<script src="/get_page/cmsimde/static/chimper/js/main.js"></script><h2>dart</h2>
 <script>
 function getDart(dirname){
     source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823233&gh_repo=cp2019&gh_path=dart_ex/" + dirname + "&theme=dark"
@@ -39,16 +134,9 @@ document.getElementById("iframe").height = 600 ;
 <p><iframe height="600" id="iframe" src="https://dartpad.dartlang.org/embed-dart.html?gh_owner=mdecourse&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/mass_spring_damping&amp;theme=dark" width="800"></iframe></p>
 <p>阻尼係數1<img alt="" height="350" src="/images/阻尼1.png" width="600"/></p>
 <p>阻尼係數2<img alt="" height="350" src="/images/阻尼0.png" width="600"/></p>
-<p><br/>W7 &lt;&lt; <a href="/get_page/dart2/W7.html">Previous</a></p>
-<!-- footer -->
+<p><br/><a href="https://colorlib.com" target="_blank"></a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 <div class="container">
-<div class="row pt-3 mx-auto">
-<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Copyright ©
-<script>
-document.write(new Date().getFullYear());
-</script>
-All rights reserved | This template is made with <i aria-hidden="true" class="icon-heart"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-</div>
+<div class="row pt-3 mx-auto"></div>
 </div>
 <!-- for footer -->
 <p></p>
@@ -79,8 +167,7 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
                     });
                     </script>
             -->
-<script src="/get_page/cmsimde/static/chimper/js/main.js"></script>
-<h2>影片</h2>
+<script src="/get_page/cmsimde/static/chimper/js/main.js"></script><h2>影片</h2>
 <h3>期中考</h3>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="400" src="https://www.youtube.com/embed/B3Z1BMFNkpw" width="600"></iframe></p>
 <h3>W10-11</h3>
@@ -89,6 +176,8 @@ All rights reserved | This template is made with <i aria-hidden="true" class="ic
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/KOBD1RtHd0Y" width="560"></iframe></p>
 <h3>w14</h3>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/PfXmtzk-Ekw" width="560"></iframe></p>
+<h3>W16</h3>
+<p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/vyB8Q8CExkg" width="560"></iframe></p>
 <h1>倉庫</h1>
 <p>這一條訊息為測試用，下一次更新倉儲時將會刪掉。</p>
 <p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
