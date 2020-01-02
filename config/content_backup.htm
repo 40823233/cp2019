@@ -5,12 +5,13 @@
 <p><img alt="x" height="500" src="/images/20170128_155549.jpg" width="800"/></p>
 <p></p>
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<p>
 <script src="/get_page/cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
 <script src="/get_page/cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
 <script src="/get_page/%E4%BD%9C/tipuesearch_content.js"></script>
 <script src="/get_page/cmsimde/static/tipuesearch/tipuesearch.js"></script>
 <script>
-            /* original tipuesearch
+/* original tipuesearch
             $(document).ready(function() {
                  $('#tipue_search_input').tipuesearch();
             });
@@ -24,7 +25,6 @@
                 });
             }
             $(document).ready(doSearch);
-        
 </script>
 <script src="/get_page/cmsimde/static/syntaxhighlighter/shCore.js" type="text/javascript"></script>
 <script src="/get_page/cmsimde/static/syntaxhighlighter/shBrushJScript.js" type="text/javascript"></script>
@@ -42,6 +42,7 @@
 <script type="text/javascript">
 SyntaxHighlighter.all();
 </script>
+</p>
 <!-- for LaTeX equations 暫時不用
 <script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
 <script type="text/javascript">
@@ -64,16 +65,46 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 -->
-<h1>作業</h1>
-<h2>JavaScript</h2>
-<p>國旗</p>
-<p><canvas height="200" id="canvas" width="300"></canvas></p>
 <p></p>
-<script src="/get_page/downloads/dart_ex/roc_flag/roc_flag.js"></script>
-<p>亂數分組</p>
-<p>學員名單 URL: <input id="studListUrl" size="50" type="text" value="https://mde.tw/cp2019/downloads/2019fall_cp_1b_list.txt"/> 每組人數: <input id="grpNum" size="3" type="text" value="10"/> <input id="submit" type="submit" value="開始分組"/></p>
-<!-- for site wrap -->
+<h1>W17 考試</h1>
 <p></p>
+<h4>Dart</h4>
+<p><button onclick="getDart('weight-dart')">重量轉換</button></p>
+<h4>Dart+html+css</h4>
+<p><button onclick="getHtmlDart('weight')">重量轉換</button></p>
+<!-- 內建放入的 Dart 原始碼 -->
+<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
+<p><br/><iframe height="600" id="iframe" src="https://dartpad.github.io/embed-dart.html?gh_owner=40823137&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/weight-dart&amp;theme=dark" width="800"></iframe></p>
+<p>請輸入所要轉換的重量<br/>以數字加上 kg 或 lb:<br/><br/><input id="temp" max="30" min="1" type="text" value="20kg"/> <input id="submit" type="button" value="換算"/><br/> <br/>轉換結果:<br/><br/><label id="output"></label></p>
+<script src="/../cp2019/downloads/dart_ex/weight/weight.js"></script>
+<p><canvas height="200" id="canvas" width="300"></canvas> <button id="button">Clear Canvas</button> <button id="fr">古巴國旗</button> <button id="roc">中華人民共和國國旗</button> <button id="jp">聖克里斯多福及尼維斯國旗</button> <button id="jp">美國國旗</button> <button id="jp">英國國旗</button> <button id="jp">加拿大國旗</button></p>
+<script src="/../cp2019/downloads/dart_ex/flag/flag.js"></script>
+<script>
+function getDart(dirname){
+    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823233&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+    document.getElementById("iframe").src = source ;
+}
+
+function getHtmlDart(dirname){
+    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823233&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function getFlutter(dirname){
+    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823233&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
+document.getElementById("iframe").src = source ;
+}
+
+function largest(){
+document.getElementById("iframe").width = document.body.clientWidth ;
+document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
+}
+
+function original(){
+document.getElementById("iframe").width = 800 ;
+document.getElementById("iframe").height = 600 ;
+}
+</script><h1>作業</h1>
 <!-- <script src="cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
 <script src="/get_page/cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/get_page/cmsimde/static/chimper/js/jquery-ui.js"></script>
@@ -203,44 +234,3 @@ document.getElementById("iframe").height = 600 ;
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h2>參考內容 預備刪掉</h2>
-<h4>w17考試</h4>
-<p></p>
-<p>請輸入所要轉換的重量<br/>以數字加上 kg 或 lb:<br/><br/><input id="temp" max="30" min="1" type="text" value="20kg"/> <input id="submit" type="button" value="換算"/><br/> <br/>轉換結果:<br/><br/><label id="output"></label></p>
-<script src="/../cp2019/downloads/dart_ex/weight/weight.js"></script>
-<p><canvas height="200" id="canvas" width="300"></canvas> <button id="button">Clear Canvas</button> <button id="fr">Draw FR</button> <button id="roc">Draw ROC</button> <button id="jp">Draw JP</button> <button id="ru">Draw RU</button> <button id="ne">Draw NE</button> <button id="ge">Draw GE</button> <button id="uk">Draw UK</button></p>
-<script src="/../cp2019/downloads/dart_ex/flag/flag.js"></script>
-<script>
-function getDart(dirname){
-    source = "https://dartpad.github.io/embed-dart.html?gh_owner=40823233&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
-    document.getElementById("iframe").src = source ;
-}
-
-function getHtmlDart(dirname){
-    source = "https://dartpad.github.io/embed-html.html?gh_owner=40823233&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
-document.getElementById("iframe").src = source ;
-}
-
-function getFlutter(dirname){
-    source = "https://dartpad.github.io/embed-flutter.html?gh_owner=40823233&gh_repo=cp2019&gh_path=downloads/dart_ex/" + dirname + "&theme=dark";
-document.getElementById("iframe").src = source ;
-}
-
-function largest(){
-document.getElementById("iframe").width = document.body.clientWidth ;
-document.getElementById("iframe").height = document.body.clientWidth*0.5 ;
-}
-
-function original(){
-document.getElementById("iframe").width = 800 ;
-document.getElementById("iframe").height = 600 ;
-}
-</script>
-<h4>純 Dart 程式</h4>
-<p><button onclick="getDart('weight-dart')">重量轉換</button></p>
-<h4>Html 程式</h4>
-<p><button onclick="getHtmlDart('weight')">重量轉換</button></p>
-<p><button onclick="getHtmlDart('flag')">各國國旗</button></p>
-<!-- 內建放入的 Dart 原始碼 -->
-<p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
-<p><br/><iframe height="600" id="iframe" src="https://dartpad.github.io/embed-dart.html?gh_owner=40823137&amp;gh_repo=cp2019&amp;gh_path=downloads/dart_ex/weight-dart&amp;theme=dark" width="800"></iframe>.</p>
