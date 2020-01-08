@@ -69,9 +69,9 @@ init_mathjax();
 <h1>W17 考試</h1>
 <p></p>
 <h4>Dart</h4>
-<p><button onclick="getDart('weight-dart')">重量轉換</button></p>
+<p><button onclick="getDart('weight)">重量轉換</button></p>
 <h4>Dart+html+css</h4>
-<p><button onclick="getHtmlDart('weight')">重量轉換</button></p>
+<p><button onclick="getHtmlDart('weight_change')">重量轉換</button></p>
 <!-- 內建放入的 Dart 原始碼 -->
 <p><button onclick="largest()">放大</button> <button onclick="original()">回復</button></p>
 <p><br/><iframe height="600" id="iframe" src="https://dartpad.github.io/embed-dart.html?gh_owner=40823233&amp;gh_repo=cp2019&amp;gh_path=dart_ex/weight-dart&amp;theme=dark" width="800"></iframe></p>
@@ -211,13 +211,13 @@ document.getElementById("iframe").height = 600 ;
 <h3>W16</h3>
 <p><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/vyB8Q8CExkg" width="560"></iframe></p>
 <h1>倉庫</h1>
-<p>這一條訊息為測試用，下一次更新倉儲時將會刪掉。</p>
+<p>原始網站刪除的東西還有部分筆記在此</p>
 <p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
 <h4>倉儲複製</h4>
-<p><span style="vertical-align: inherit;">git clone --recurse-submodules<span> </span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a><a href="https://github.com/mdecourse/newcms.git"></a></span></span></p>
+<p><span>git clone --recurse-submodules<span> </span></span><span><span><a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a><a href="https://github.com/mdecourse/newcms.git"></a></span></span></p>
 <p>這是還沒有設定使用者時的代碼。</p>
-<p><span style="vertical-align: inherit;">git clone --recurse-submodules<span> </span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><a href="https://github.com/40823233/cp2019.git">https://github.com/40823233/cp2019.git</a><a href="https://github.com/mdecourse/newcms.git"></a></span></span></p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">這是我的倉儲的複製方法。</span></span></p>
+<p><span>git clone --recurse-submodules<span> </span></span><span><span><a href="https://github.com/40823233/cp2019.git">https://github.com/40823233/cp2019.git</a><a href="https://github.com/mdecourse/newcms.git"></a></span></span></p>
+<p><span><span>這是我的倉儲的複製方法。</span></span></p>
 <h4>上傳三連</h4>
 <p>git add .</p>
 <p>git commit -m  "add repositere link"</p>
@@ -226,12 +226,49 @@ document.getElementById("iframe").height = 600 ;
 <h4>利用 cmsimde 建立靜態網誌方法:</h4>
 <p>1. 在 github 建立倉儲, git clone 到近端</p>
 <p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">以git子模塊添加  </span></span><a href="https://github.com/mdecourse/cmsimde"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://github.com/mdecourse/cmsimde</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">  cmsimde</span></span></p>
+<p><span><span>以git子模塊添加 <span> </span></span></span><a href="https://github.com/mdecourse/cmsimde"><span><span>https://github.com/mdecourse/cmsimde</span></span></a><span><span><span> </span> cmsimde</span></span></p>
 <p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
 <p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
 <p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
 <p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">git clone --recurse-submodules </span></span><a href="https://github.com/mdecourse/newcms.git"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://github.com/mdecourse/newcms.git</span></span></a></p>
+<p><span><span>git clone --recurse-submodules<span> </span></span></span><a href="https://github.com/mdecourse/newcms.git"><span><span>https://github.com/mdecourse/newcms.git</span></span></a></p>
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<h4 id="-">數學符號與方程式</h4>
+<p>Inline math equations go in like so:<span> </span><span class="MathJax" data-mathml='&lt;math xmlns="http://www.w3.org/1998/Math/MathML"&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;&amp;#x03D5;&lt;/mi&gt;&lt;mrow class="MJX-TeXAtom-ORD"&gt;&lt;mo&gt;/&lt;/mo&gt;&lt;/mrow&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/math&gt;' id="MathJax-Element-1-Frame" role="presentation" style="display: inline; font: inherit; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; vertical-align: baseline; position: relative;" tabindex="0"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1"><span><span><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3">ω</span><span class="mo" id="MathJax-Span-4">=</span><span class="mi" id="MathJax-Span-5">d<span></span></span><span class="mi" id="MathJax-Span-6">ϕ</span><span class="texatom" id="MathJax-Span-7"><span class="mrow" id="MathJax-Span-8"><span class="mo" id="MathJax-Span-9">/</span></span></span><span class="mi" id="MathJax-Span-10">d<span></span></span><span class="mi" id="MathJax-Span-11">t</span></span><span></span></span></span><span></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ω</mi><mo>=</mo><mi>d</mi><mi>ϕ</mi><mrow class="MJX-TeXAtom-ORD"><mo>/</mo></mrow><mi>d</mi><mi>t</mi></math></span></span>. Display math should get its own line and be put in in double-dollarsigns:</p>
+<div class="MathJax_Display"><span class="MathJax" data-mathml='&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;&amp;#x222B;&lt;/mo&gt;&lt;mi&gt;&amp;#x03C1;&lt;/mi&gt;&lt;msup&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow class="MJX-TeXAtom-ORD"&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;/math&gt;' id="MathJax-Element-2-Frame" role="presentation" style="display: inline; font: inherit; text-indent: 0px; text-align: center; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; vertical-align: baseline; position: relative;" tabindex="0"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-12"><span><span><span class="mrow" id="MathJax-Span-13"><span class="mi" id="MathJax-Span-14">I<span></span></span><span class="mo" id="MathJax-Span-15">=</span><span class="mo" id="MathJax-Span-16">∫<span></span></span><span class="mi" id="MathJax-Span-17">ρ</span><span class="msubsup" id="MathJax-Span-18"><span><span><span class="mi" id="MathJax-Span-19">R</span><span></span></span><span><span class="texatom" id="MathJax-Span-20"><span class="mrow" id="MathJax-Span-21"><span class="mn" id="MathJax-Span-22">2</span></span></span><span></span></span></span></span><span class="mi" id="MathJax-Span-23">d<span></span></span><span class="mi" id="MathJax-Span-24">V<span></span></span></span><span></span></span></span><span></span></span></nobr></span></div>
+<div class="MathJax_Display"><span class="MathJax" data-mathml='&lt;math xmlns="http://www.w3.org/1998/Math/MathML" display="block"&gt;&lt;mi&gt;I&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;&amp;#x222B;&lt;/mo&gt;&lt;mi&gt;&amp;#x03C1;&lt;/mi&gt;&lt;msup&gt;&lt;mi&gt;R&lt;/mi&gt;&lt;mrow class="MJX-TeXAtom-ORD"&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;mi&gt;d&lt;/mi&gt;&lt;mi&gt;V&lt;/mi&gt;&lt;/math&gt;' role="presentation" style="display: inline; font: inherit; text-indent: 0px; text-align: center; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; vertical-align: baseline; position: relative;" tabindex="0"><span class="math"><span><span><span class="mrow"><span class="mi"> </span></span></span></span></span></span></div>
+<div class="MathJax_Display">
+<div class="slides">
+<section class="stack present" data-previous-indexv="0">
+<section class="present" data-markdown="" data-markdown-parsed="true">
+<h4 id="-markdown-">利用 MARKDOWN 寫投影片</h4>
+<p>以下利用 Markdown 格式展示 Python 程式碼:</p>
+<pre><code class="hljs xl"># use threading <span class="hljs-built_in">and</span> subprocess to threading the make process
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> subprocess
+<span class="hljs-keyword">import</span> threading
+
+def domake():
+
+    <span class="hljs-built_in">path</span> = <span class="hljs-string">"../exposed/api/exposed"</span>
+    ubuntu = <span class="hljs-string">"../Ubuntu"</span>
+
+    # create obj <span class="hljs-built_in">path</span>
+
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">not</span> os.<span class="hljs-built_in">path</span>.exists(<span class="hljs-built_in">path</span>+<span class="hljs-string">"/../obj"</span>):
+        os.makedirs(<span class="hljs-built_in">path</span>+<span class="hljs-string">"/../obj"</span>)
+
+    subprocess.call([<span class="hljs-string">"make"</span>, <span class="hljs-string">"clean"</span>], cwd=<span class="hljs-built_in">path</span>)
+    subprocess.call(<span class="hljs-string">"make"</span>, cwd=<span class="hljs-built_in">path</span>)
+    subprocess.call([<span class="hljs-string">"cp"</span>, <span class="hljs-string">"{libslvs.so, _slvs.so, slvs.py}"</span>, ubuntu], cwd=<span class="hljs-built_in">path</span>)
+    subprocess.call([<span class="hljs-string">"python3"</span>, <span class="hljs-string">"circle_ex.py"</span>], cwd=<span class="hljs-built_in">path</span>+<span class="hljs-string">"/"</span>+ubuntu)
+
+make = threading.Thread(target=domake)
+make.start()<br/><br/><span face="Lato" style="font-family: Lato;"><span style="white-space: normal;"> </span></span>使用 iframe 導入影片<br/><br/>導入影片 template<br/><br/>&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+</section>
+<section aria-hidden="true" class="future" data-markdown="" data-markdown-parsed="true" hidden=""></section>
+</section>
+</div>
+</div>
